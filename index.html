@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Treasure Data Excercise - Luan Dang</title>
+<link href="css/treasure.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+
+<div>
+<label> Pie Options</label>
+<ul id="bar" class="bar">
+	<li>Create</li>
+	<li>Delete</li>
+	<li>Update</li>
+	<li>List</li>
+	<li>Read</li>
+</ul>
+</div>
+
+<div id="main"></div>
+
+<div>
+<label> Slice Options</label>
+<ul id="slice_options" class="bar">
+	<li>Create</li>
+	<li>Delete</li>
+	<li>Update</li>
+	<li>Draw</li>
+</ul>
+</div>
+
+<div id="main_slice"> </div>
+
+
+
+<!-- Pie HTML -->
+<script id="c_cont" type="text/template">
+<div id="create_cont">
+	<input type="text" id="p_title" name="p_title" placeholder="title" />
+    <input type="text" id="p_desc" name="p_desc" placeholder="description" />
+    <button type="button" id="create_pie">Create Pie</button>
+</div>
+</script>
+
+
+<script id="d_cont" type="text/template">
+<div id="delete_cont">
+	<input type="text" id="pie_num" placeholder="pie id number" />
+    <button type="button" id="delete_pie">Delete Pie</button>
+</div>
+</script>
+
+<script id="list_cont" type="text/template">
+  <ul id="pie_list"></ul>
+</script>
+
+<script id="u_cont" type="text/template">
+   <div id="update_cont">
+	<input type="text" id="u_title" name="u_title" placeholder="title" />
+    <input type="text" id="u_desc" name="u_desc" placeholder="description" />
+     <input type="text" id="pie_num" name="pie_num" placeholder="pie id number" />
+    <button type="button" id="update_pie">Update Pie</button>
+</div>
+</script>
+
+<script id="r_cont" type="text/template">
+<div id="read_cont">
+	<input type="text" id="pie_num" placeholder="pie id number to read" />
+    <button type="button" id="read_pie">Read Pie</button>
+</div>
+<div id="read_data"></div>
+</script>
+
+<!-- Slice HTML -->
+<script id="c_cont_s" type="text/template">
+<div id="create_cont_s">
+	<input type="text" id="p_name" name="p_name" placeholder="name" />
+    <input type="text" id="p_value" name="p_value" placeholder="value" />
+    <input type="text" id="pie_num_s" placeholder="pie id number" />
+    <button type="button" id="create_slice">Create Pie</button>
+</div>
+</script>
+
+<script id="list_cont_s" type="text/template">
+  <input type="text" id="pie_num_s" placeholder="pie id number" />
+  <button type="button" id="get_slices">Draw Slices</button>
+</script>
+
+<script id="d_cont_s" type="text/template">
+<div id="delete_cont">
+	<input type="text" id="pie_num_s" placeholder="pie id number" />
+	<input type="text" id="slice_num" placeholder="slice id number" />
+    <button type="button" id="delete_slice">Delete Slice</button>
+</div>
+</script>
+
+<script id="u_cont_s" type="text/template">
+   <div id="update_cont_s">
+	<input type="text" id="u_name_s" name="u_name_s" placeholder="name" />
+    <input type="text" id="u_value_s" name="u_value_s" placeholder="numeric value" />
+     <input type="text" id="pie_num_s" name="pie_num_s" placeholder="pie id number" />
+     <input type="text" id="slice_num" placeholder="slice id number" />
+    <button type="button" id="update_slice">Update Slice</button>
+</div>
+</script>
+
+
+<div id="container" style="height: 400px"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js" ></script>
+<script src="js/pie.js" ></script>
+<script src="js/slice.js"></script>
+<script src="js/services.js" ></script>
+<script src="js/controller.js" async></script>
+</body>
+
+</html>

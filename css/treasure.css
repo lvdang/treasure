@@ -1,0 +1,7 @@
+.bar {
+	list-style-type: none;	 
+}
+
+.bar > li {
+	display: inline;
+}
